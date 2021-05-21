@@ -1,1 +1,9 @@
+AccountDetails8791.session
 userData.json
+credentials.json
+user.py
+__pycache__/
+
+__pycache__/errors.cpython-39.pyc
+__pycache__/user.cpython-39.pyc
+.gitignore

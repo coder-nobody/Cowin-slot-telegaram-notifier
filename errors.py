@@ -10,5 +10,6 @@ loggingData = {
     'SlotSame': 'The data is same as above.',
     'SlotFail': 'No slot Available',
     'ApiFail': 'Fetching data from the API',
+    'invalidData':'Invalid Data entered!!!!!. Reason: ', 
     'default': ''
 }
