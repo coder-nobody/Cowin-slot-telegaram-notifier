@@ -10,10 +10,7 @@ This console app can ease up your vaccine hunt by sending Vaccine availability i
 
 ## Installation
  * For windows clone or download this repo and run ```runscript.bat```
- * For other operating system install the dependencies in ```requirements.txt``` and run ```main.py``` from your console on python version >3.7
-
-For installing the requirements.txt use this command:  
-```pip install -r requirements.txt```
+ * For other operating system install the dependencies in ```requirements.txt``` and run ```main.py``` from your console on python >3.7 for installing the requirements.txt use this command:  ```pip install -r requirements.txt```
 
 ## Initial setup
 
@@ -58,6 +55,9 @@ Enter the OTP and the setup is complete. :clap::clap:
 After that it will never ask for OTP and you will start receiving vaccine messages on your registered recipient accounts.
 
 ![image_creds](usage_images/Final_result.JPG)
+
+This is how you will recieve the Telegram notification.
+
 ![image_creds](usage_images/Telegram_message.jpeg)
 
 ## Getting Telegram API ID and HASH
@@ -71,3 +71,10 @@ In order to obtain an API id you need to do the following:
 
 You can also refer offficial documentation at https://core.telegram.org/api/obtaining_api_id
 
+## Note:
+---
+Clone or Fork this Repository do remember to give a star :star2: that motivates me to continue my work. 
+
+Do suggest any changes your contributions to this project are highly appreciated.
+
+Using this app get notifications for yourself as well as your friends. Happy to help :relaxed:
