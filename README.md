@@ -20,9 +20,15 @@ Now to send messages using telegram you must have Telegram account and you shoul
 
 If you do not have that Don't worry, in the next section it is described how to get that.
 
-Now on starting the app, follow the on screen instructions and Enter the Telegram API credentials.
+Now on starting the app, follow the on screen instructions and Enter the Telegram API credentials.  
 
-After that add valid Recipient data. It consists of Pincode, Age group (18 of 45) and his telegram credentials.
+![image_creds](usage_images/Credentials.JPG)
+
+After that Set the value of Pincode sleep time, by default it is 30 seconds.
+
+![image_creds](usage_images/time.JPG)
+
+After that add valid Recipient data. It consists of Pincode, Age group (18 of 45) and his telegram credentials.  
 
 Telegram recipient credentials can be:
 * Recipient mobile number with country code eg.(+91xxxxxxxxxx)
@@ -30,14 +36,24 @@ Telegram recipient credentials can be:
 * A Telegram group invite link (<b>You must be a member of that group and have messaging rights</b>)
 
 You can add more users also.
+
+![image_creds](usage_images/userData.JPG)
+
+
 If you later wish to add users You can do so by running ```manageUsers.bat```
 
 Alternatively you can also edit the entries in Database.json file.
 
 After successfully completing these steps, your credentials will be validated and an OTP will be sent from telegram.
+
+![image_creds](usage_images/bot-token.JPG)
+
 Enter the OTP and the setup is complete. :clap::clap:
 
 After that it will never ask for OTP and you will start receiving vaccine messages on your registered recipient accounts.
+
+![image_creds](usage_images/Final_result.JPG)
+![image_creds](usage_images/Telegram_message.jpeg)
 
 ## Getting Telegram API ID and HASH
 
