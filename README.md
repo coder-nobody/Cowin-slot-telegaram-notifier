@@ -16,6 +16,11 @@ For installing the requirements.txt use this command:
 ```pip install -r requirements.txt```
 
 ## Initial setup
+
+#### <em>You can skip the following steps if you add credentials information in Database.json in advance </em>
+
+![image_creds](usage_images/database_structure.JPG)
+
 Now to send messages using telegram you must have Telegram account and you should have your Telegram API Id and Api Hash
 
 If you do not have that Don't worry, in the next section it is described how to get that.
