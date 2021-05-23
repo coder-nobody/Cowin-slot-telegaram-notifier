@@ -2,10 +2,10 @@ from DataManager import dataBase
 from telethon import TelegramClient
 import asyncio
 import requests
-from LogData import logging, getDateTime
+from LogData import logger, getDateTime
 from utilities import *
 
-logging.info('default', 'Basic Startup complete!!')
+logger.info('default', 'Basic Startup complete!!')
 userData = dataBase.getUserData()
 #function to send the telegram messages
 async def sendMessage(data,message):   
@@ -14,9 +14,9 @@ async def sendMessage(data,message):
     for user in data['user']:
         try:   
             await client.send_message(user, message)
-            logging.info('SlotSuccess', f"to {user} {msg}")
+            logger.info('SlotSuccess', f"to {user} {msg}")
         except Exception as e:
-            logging.error('SendFail', f"{msg}\n\nUSER: {user} \nEXCEPTION: {' , '.join(e.args)}")
+            logger.error('SendFail', f"{msg}\n\nUSER: {user} \nEXCEPTION: {' , '.join(e.args)}")
 
 async def filterData(session, age, data):
     # process the data and get relevant data
@@ -27,22 +27,22 @@ async def filterData(session, age, data):
         if data['session'] != message:
             await sendMessage(data, message)
         else:
-            logging.warning('SlotSame', msg)
+            logger.warning('SlotSame', msg)
     else:
-        logging.info('SlotFail', msg)
+        logger.info('SlotFail', msg)
 
 #Telegram Authorization and login function
 async def login():
     account = dataBase.getTelegramCredentials()
     global client
     client = TelegramClient( account['Name'], account['Id'], account['Hash'] )
-    logging.info('CliStrt')
+    logger.info('CliStrt')
     try:
         await client.start()
-        logging.info('StartSuccess')
+        logger.info('StartSuccess')
         return True
     except Exception as e:
-        logging.error('StartFailed')
+        logger.error('StartFailed')
         return False
         
 async def main():
@@ -70,7 +70,7 @@ async def main():
                         await filterData(session,int(age),value)            
                 
             else:
-                logging.error('ApiFail', f"{msg} status code: {str(response.status_code)} REASON: {response.reason}")
+                logger.error('ApiFail', f"{msg} status code: {str(response.status_code)} REASON: {response.reason}")
             counter  += 1
             await asyncio.sleep(sleepTime)
             if(counter > 10):

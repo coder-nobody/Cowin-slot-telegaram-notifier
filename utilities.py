@@ -1,16 +1,21 @@
 #function to process the data
 def processData(session, age):
-    message = ""
+    message = f"Vaccine Availability for {age}+:\n"
     for center in session["centers"]:
         slot = ""
+        vaccine = ""
         for day in center['sessions']:
             if day['available_capacity'] and day['min_age_limit'] == age:
                 slot += f"{day['date']}: {day['available_capacity']}\n"
+                vaccine = day['vaccine']
 
         if(len(slot)):
-            msg = f"center:{center['name']}\nSlot:\n{slot}"
+            msg = f"Center: {center['name']}\nSlots for {vaccine} :\n{slot}"
             message += msg + '\n'
-    return message
+    if message == f"Vaccine Availability for {age}+:\n":
+        return ""
+    else:
+        return message
 
 
 # do not change below this line
